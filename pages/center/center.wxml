@@ -1,0 +1,39 @@
+<view class='center_top'>
+  <image class='center_avatar' src='{{avatarUrl}}'></image>
+  <view class='center_nickname'>{{nickName}}</view>
+  <view class='center_device_info flex_box' style="flex-direction:row;">
+    <block wx:for="{{deviceArr}}" wx:key="k">
+      <view class='items_box flex-item'>
+        <view>{{item.num}}</view>
+        <view>{{item.text}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<view class='center_list'>
+  <view class='center_list_item' bindtap='errorList'>
+    <image class='list_item_icon' src='../../images/notify.png'></image>
+    <view class='list_item_name'>系统消息</view>
+    <image class='list_item_more' src='../../images/more.png'></image>
+    <block class='cb'></block>
+  </view>
+  <view class='center_list_item' bindtap='aboutUs'>
+    <image class='list_item_icon' src='../../images/phone.png'></image>
+    <view class='list_item_name'>关于我们</view>
+    <image class='list_item_more' src='../../images/more.png'></image>
+    <block class='cb'></block>
+  </view>
+  <view class='center_list_item'>
+    <image class='list_item_icon' src='../../images/notify.png'></image>
+    <view class='list_item_name'>信息推送</view>
+    <switch class='list_item_message' checked='{{openMessage}}' bindchange="openMessage"></switch>
+    <block class='cb'></block>
+  </view>
+  <view class='center_list_item' bindtap='loginOut'>
+    <image class='list_item_icon' src='../../images/off.png'></image>
+    <view class='list_item_name'>退出登陆</view>
+    <image class='list_item_more' src='../../images/more.png'></image>
+    <block class='cb'></block>
+  </view>
+</view>

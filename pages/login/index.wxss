@@ -1,0 +1,81 @@
+/* pages/login/index.wxss */
+#body{
+  width: 100vw;
+  height: 100vh;
+  background-size: 100% 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+#tx-style{
+  margin-left:28%;  
+  font-size: 7vh;
+  color: #fff;
+  margin-bottom: 8vh;
+}
+#login_box{
+  padding :15px;
+  width: 80%;
+  position: fixed;
+  margin: 25vw 5%;
+}
+
+.user{
+  height:45px;
+  background:#fff;
+}
+.psw{
+  height:45px;
+  background: #fff;
+}
+.placeholder-class{
+  color:rgb(8, 7, 7) ;
+  font-size: 4vw;
+}
+#userview{
+  display: flex;
+  height:45px;
+  background:#fff;
+  border: 1rpx solid #d8d9dd;
+  border-top-left-radius:0.3em;
+  border-top-right-radius:0.3em;
+}
+#userimg{
+  margin: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+#pswview{
+  display: flex;
+  height:45px;
+  background:#fff;
+  border: 1rpx solid #d8d9dd;
+  border-bottom-left-radius:0.3em;
+  border-bottom-right-radius:0.3em;
+  margin-bottom: 4vh
+}
+#pswimg{
+  margin: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+
+.logon_btn{
+  font-size: 4vw;
+  color: #fff;
+  height: 38px;
+  cursor: pointer;
+  background: #f9671e;
+  border: 2px solid #f9671e;
+  border-radius: 0.3em;
+  -o-border-radius: 0.3em;
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+}
+.button-hover {
+  font-size: 4vw;
+  color: #f9671e;
+  background:rgba(7, 7, 7,0);
+}

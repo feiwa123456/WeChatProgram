@@ -1,0 +1,27 @@
+<view class='list_top'>
+  <view style='width:75%;float:left'>
+      <picker class='search_box' id='typePicker' range='{{typeList}}' bindchange='typeChange'>
+        <image class='search_icon_img' src='../../images/icon_search.png'></image>
+        <view id='typeText' class='search_input'>{{deviceType}}</view>
+        <block class='cb'></block>
+      </picker>
+  </view>
+  <picker mode="multiSelector" range="{{multiArray}}" value="{{multiIndex}}" bindchange="MultiPickerChange" bindcolumnchange="MultiPickerColumnChange"  class='btn region_btn'>{{areaText}}</picker>
+  <block class='cb'></block>
+</view>
+
+<block wx:for="{{deviceList}}" wx:key="k">
+  <view class="flex-item">
+    <image class='device_icon' src='{{item.deviceIcon}}' bindtap='deviceSensor' data-deviceCore='{{item.deviceCore}}'></image>
+    <view class='device_info' bindtap='deviceSensor' data-deviceCore='{{item.deviceCore}}'>
+      <view>{{item.deviceName}}</view>
+      <view>{{item.deviceCore}}</view>
+    </view>
+    <view class='device_state'>
+      <view class='device_status'>{{item.deviceStatus}}</view>
+      <view class='device_state_btn btn' bindtap='deviceController' data-productId='{{item.productId}}'
+        data-name="{{item.deviceName}}" data-deviceCore='{{item.deviceCore}}' data-serverMessage='{{item.serverMessage}}'  data-deviceId='{{item.deviceId}}'>控制</view>
+    </view>
+    <view class='cb'></view>
+  </view>
+</block>

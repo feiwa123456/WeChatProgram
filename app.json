@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/login/index",
+    "pages/index/index",
+    "pages/center/center",
+    "pages/list/list",
+    "pages/map/map",
+    "pages/chart/index",
+    "pages/sensors/index",
+    "pages/controller/index",
+    "pages/errorList/error"    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#44b5d8",
+    "navigationBarTitleText": "中泰能",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_select.png"
+      },
+      {
+        "pagePath": "pages/map/map",
+        "text": "设备地图",
+        "iconPath": "images/icon_map.png",
+        "selectedIconPath": "images/icon_map_select.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "设备列表",
+        "iconPath": "images/icon_list.png",
+        "selectedIconPath": "images/icon_list_select.png"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "个人中心",
+        "iconPath": "images/icon_center.png",
+        "selectedIconPath": "images/icon_center_select.png"
+      }
+    ]
+  }
+}

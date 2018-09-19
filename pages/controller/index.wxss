@@ -1,0 +1,89 @@
+#page_top{
+  width: 100%;
+  height: 20vh;
+  background: #44b5d8;
+  background: -moz-linear-gradient(-45deg, #44b5d8 0%, #44b5d8 100%, #44b5d8 100%); 
+  background: -webkit-linear-gradient(-45deg, #44b5d8 0%,#44b5d8 100%,#44b5d8 100%); 
+  background: linear-gradient(135deg, #44b5d8 0%,#44b5d8 100%,#44b5d8 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4e391', endColorstr='#b4e391',GradientType=1 ); 
+
+}
+#page_top image{
+  position: absolute;
+  top: -2.5vh;
+  right: 0;
+  width: 25vh;
+  height: 25vh;
+  background-size: 100% 100%;
+  opacity: .3;
+}
+#device_name{
+  color: #fff;
+  font-size: 10vw;
+  font-weight: bold;
+  padding-top: 2vh;
+  margin-left: 2vw;
+}
+
+.singleView{
+  width: 95vw;
+  margin: 0 2.5vw;
+  font-size: 4vw;
+  border-bottom: 1px solid #ededed;
+  padding: 2.5vw 0;
+  color: #70c8e2;
+  
+  
+}
+.singleTestView{
+     width:30vw;
+     margin: 2vw;
+     float: left;
+}
+.singleInputView{
+     width:50vw;
+     margin: 2vw;
+     float: right;
+}
+.custominput{
+  border: 1rpx solid #dcdcdc;
+  background: white;
+  width: 40%;
+  float: left;
+  height:8vw;
+}
+.customText{
+  width: 4.5vw;
+  height:8vw;
+  float: left;
+  color: #626262;
+  margin-left: 2vw;
+  /* border-top: 1rpx solid #dcdcdc;
+  border-bottom: 1rpx solid #dcdcdc;
+  border-right: 1rpx solid #dcdcdc; */
+  background: white;
+}
+.customButton{
+  float: right;
+}
+.Time{
+  border: 2rpx solid #dcdcdc;
+  background: white;
+  color: #626262;
+  width: 40vw;
+  
+}
+.fixedinput{
+  float: left;
+  border: 1rpx solid #dcdcdc;
+  background: white;
+  color:#626262;
+  width: 40%;
+}
+.fixedStyle button{
+  float: right;
+}
+
+/* .wx-switch-input{width:42px !important;height:20px !important;}
+.wx-switch-input::before{width:41px !important;height: 20px !important;}
+.wx-switch-input::after{width: 18px !important;height: 18px !important;} */

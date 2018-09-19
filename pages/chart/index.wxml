@@ -1,0 +1,38 @@
+<view id='page_top'>
+  <image id='chartImage' src='../../images/data.png'></image>
+  <view id='device_name'>{{deviceName}}</view>
+  <view id='filter_box'>
+    <view class='filter_hide' wx:if="{{!filterShow}}">
+      <text bindtap='showFilter'>筛选</text>
+      <image id='filterImages' src='../../images/right_while.png' bindtap='showFilter'></image>
+      <view class='cb'></view>
+    </view>
+    <view class='filter_show' wx:if="{{filterShow}}">
+      <text class='filter_title'>日期筛选:</text>
+      <picker mode="date" bindchange='startDateChange'>
+        <view class='pickerText'>{{startDate}}</view>
+      </picker>
+      <text class='pickerText' style='float: left;'>-</text>
+      <picker mode="date" bindchange='endDateChange'>
+        <view class='pickerText'>{{endDate}}</view>
+      </picker>
+      <view id='queryBtn' bindtap='getData'>
+        <image src='../../images/query.png'></image> 
+        <view id='queryText'>查询</view>
+      </view>
+      <image id='closeBtn' src='../../images/closeBtn.png' bindtap='closeFilter'></image>
+      <view class='cb'></view>
+    </view>
+  </view>
+</view>
+<view class="container">
+  <view style='float:right'>
+    <text class='switchTitle'>实时更新：</text>
+    <switch bindchange="dynamicChange"/>
+  </view>
+  <view class='cb'></view>
+  
+  <block wx:for="{{chartList}}" wx:key="k">
+    <ec-canvas id="{{item.id}}" canvas-id="{{item.canvas}}" ec="{{ec}}"></ec-canvas> 
+  </block>
+</view>

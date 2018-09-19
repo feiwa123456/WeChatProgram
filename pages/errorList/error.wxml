@@ -1,0 +1,16 @@
+<view style="color:#5291b8;text-align:center">异常消息</view>
+
+<view class="ForView"  style="color:#5e5959;display:flex;flex-flow:column;flex-wrap:wrap-reverse;margin:10px;" wx:for="{{Errordate}}" wx:for-index="idx">
+  <view >
+    <text style="color:#424242;">异常设备：</text>
+    <text style="color:#ffcf22;font-size:small">{{item.errorTarget}}</text>
+  </view>
+  <view >
+    <text style="color:#424242;">异常内容：</text>
+    <text style="color:#ffcf22;font-size:small;margin">{{item.msg}}</text>
+  </view>
+    <!-- 分割线 -->
+    <view wx:if="{{idx !=Errordate.length-1}}" style='width:100%;height:2px;background:#f3f3f3'></view>
+</view>
+<view style='text-align:center;color:#c1c1c1'>{{loadMoreData}}</view>
+    

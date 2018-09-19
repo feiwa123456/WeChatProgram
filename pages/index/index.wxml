@@ -1,0 +1,26 @@
+<swiper indicator-dots="{{swiper.indicatorDots}}" 
+autoplay="{{swiper.autoplay}}" interval="{{swiper.interval}}" duration="{{swiper.duration}}">
+  <block wx:for="{{swiper.imgUrls}}" wx:key="k">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="flex_box" style="flex-direction:row;">
+  <block wx:for="{{itemArr}}" wx:key="k">
+      <view class="flex-item">
+        <image class='item_image' src='{{item.icon}}'></image>
+        <text>{{item.text}}</text>
+      </view>
+  </block>
+</view>
+
+<view class='news'>
+  <text class='news_title'>热门资讯</text>
+  <text class='news_more'>更多></text>
+
+  <view class='bottom-line'>
+    <text>暂无更多内容</text>
+  </view>
+</view>

@@ -1,0 +1,13 @@
+<view id='page_top'>
+  <image src='../../images/data.png'></image>
+  <view id='device_name'>{{deviceName}}</view>
+</view>
+
+<view id='port_box'>
+  <view class='items' wx:for="{{sensorsList}}" wx:key="k" data-sensorid='{{item.sensorId}}' bindtap='showCharts'>
+    <view class='sensor_port'>{{item.port}}</view>
+    <view class='sensor_name'>{{item.sensorName}}</view>
+    <image class='sensor_icon' src='https://ztn-tech.com/public/static/wechar-resource/{{item.iocUrl}}'></image>
+    <image class='sensor_detail' src='../../images/item_right.png'></image>
+  </view>
+</view>
