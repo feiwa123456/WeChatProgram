@@ -1,0 +1,220 @@
+page{
+  background: #f2f2f2;
+}
+
+.message-icon{ 
+  float: left;
+  background-size: 100% 100%;
+}
+/* swiper{ 
+  width: 100%;
+  height: 30vw;
+  margin-bottom: 2vw;
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+} */
+.flex_box{
+  display: flex;
+  width: 95vw;
+  margin: 2.5vw 2.5vw;
+  background: #fff;
+  border-radius: 3vw;
+
+}
+.flex-item{
+  text-align: center;
+  width: 25%;
+  font-size: 3.2vw;
+  font-weight: bold;
+  margin: 2.5vw 0vw;
+  
+}
+.item_image{
+  width: 10vw;
+  height: 10vw;
+  background-size: 100% 100%;
+  border: 1px solid #44b6d8;
+  border-radius: 50%;
+  padding: 3.5vw;
+  margin: 1vw 4vw;
+}
+.news{
+  /* width: 90vw; */
+  padding: 3vw 5vw;
+  margin-bottom: 50px;
+}
+.news_title{
+  font-weight: bold;
+  font-size: 4vw;
+  height: 30px;
+  line-height: 30px;
+}
+.news_more{
+  font-size: 3.5vw;
+  color: #707070;
+  float: right;
+  height: 30px;
+  line-height: 30px;
+}
+.bottom-line{
+  color: #707070;
+  margin: 3vw 1vh;
+  border-top: 1px solid #efefef;
+	
+}
+.notice-title{
+  float: left;
+  font-size:4vw;
+  margin-left: 5px;
+  color: rgb(252, 214, 146);
+  height: 20px;
+  line-height: 20px;
+}
+.notice-time{
+  float: right;
+  font-size:3vw;
+  margin-right: 8px;
+  height: 20px;
+  line-height: 20px;
+}
+.swiper-block {
+height: 300rpx;
+width: 100%;
+}
+
+swiper-item {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+overflow: unset;
+}
+.slide-image{
+height: 220rpx;
+width: 520rpx;
+border-radius: 9rpx;
+box-shadow: 0px 0px 30rpx rgba(0, 0, 0, 0.2);
+margin: 0rpx 30rpx;
+z-index: 1; 
+}
+.active{
+transform: scale(1.14);
+transition: all 0.2s ease-in 0s;
+z-index: 20;
+}
+
+
+.nav-list {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 40rpx 0px;
+  justify-content: space-between;
+}
+
+.nav-li {
+  padding: 30rpx;
+  border-radius: 12rpx;
+  width: 45%;
+  margin: 0 2.5% 40rpx;
+  background-image: url(https://image.weilanwl.com/color2.0/cardBg.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-li::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: -10%;
+  border-radius: 10rpx;
+  opacity: 0.2;
+  transform: scale(0.9, 0.9);
+}
+
+.nav-li.cur {
+  color: #fff;
+  background: rgb(94, 185, 94);
+  box-shadow: 4rpx 4rpx 6rpx rgba(94, 185, 94, 0.4);
+}
+
+.nav-title {
+  font-size: 32rpx;
+  font-weight: 300;
+}
+
+.nav-title::first-letter {
+  font-size: 40rpx;
+  margin-right: 4rpx;
+}
+
+.nav-name {
+  font-size: 28rpx;
+  text-transform: Capitalize;
+  margin-top: 20rpx;
+  position: relative;
+}
+
+.nav-name::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40rpx;
+  height: 6rpx;
+  background: #fff;
+  bottom: 0;
+  right: 0;
+  opacity: 0.5;
+}
+
+.nav-name::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100rpx;
+  height: 1px;
+  background: #fff;
+  bottom: 0;
+  right: 40rpx;
+  opacity: 0.3;
+}
+
+.nav-name::first-letter {
+  font-weight: bold;
+  font-size: 36rpx;
+  margin-right: 1px;
+}
+
+.nav-li image {
+  position: absolute;
+  right: 30rpx;
+  top: 30rpx;
+  font-size: 52rpx;
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.text-light {
+  font-weight: 300;
+}
+/* 
+.gif-wave{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  mix-blend-mode: screen;  
+  height: 100rpx;   
+} */

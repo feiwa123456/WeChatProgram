@@ -1,0 +1,11 @@
+
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>中泰能公司</view>
+  <view class='text-content'>
+    <view>Hi！关于中泰能公司</view>
+    <view class='margin-top-sm'>中山市中泰能科技有限公司是一家以互联网+智能硬件技术创新为核心的企业。公司成立以来，始终致力于农业物联网规模化应用，农业智能硬件研发与配合农业大数据分析公司提供重要农产品数据，为科学种植、食品安全溯源、农业品牌打造提供技术及数据服务</view>
+    <view class='margin-top-sm'>产品完全自主研发，从硬件，平台到app以及网页，拥有完整的知识产权，能快速，灵活满足客户需求，公司具有多个专项项目，包含农业，零售业等方面，能快速提供解决方案以及二次定制开发的能力</view>
+    <view class='margin-top-sm'>分布式架构，平台管理，流媒体转发，云存储，支持快速部署全套或部分系统给合作伙伴，互联网上管理几百到百万设备和摄像机，客户端SDK或api化，支持java php等不同平台，也可提供二次开发或全套源代码给合作伙伴，给合作伙伴提供硬件和软件的全套支持和开发帮助</view>
+    <view class='margin-top-sm'>更多功能敬请期待！</view>
+  </view>
+</view>

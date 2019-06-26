@@ -1,0 +1,13 @@
+<view class="cu-timeline" wx:for="{{onlineList}}" wx:key="k">
+  <view class="cu-item cur cuIcon-noticefill" wx:if="{{item.status=='ONLINE'}}">
+    <view class="content bg-green shadow-blur">
+      <text>{{item.createDate}}</text> {{item.statusText}}
+    </view>
+  </view>
+  <view class="cu-time" wx:if="{{item.status=='OFFLINE'}}" >离线</view>
+  <view class="cu-item text-red cuIcon-attentionforbidfill" wx:if="{{item.status=='OFFLINE'}}">
+    <view class="content bg-red shadow-blur">
+      <text>{{item.createDate}}</text> {{item.statusText}}
+    </view>
+  </view>
+</view>

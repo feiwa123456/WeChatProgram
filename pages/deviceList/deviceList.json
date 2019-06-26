@@ -1,0 +1,9 @@
+{
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#999999",
+  "component": true,
+  "usingComponents": {
+    "surplus": "/components/surplus/surplus",
+    "signal": "/components/signal/signal"
+  }
+}

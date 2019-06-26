@@ -1,0 +1,21 @@
+<view>
+  <map style="height:{{mapHeight}};width: 100%;" id='myMap' bindregionchange="onMapChange" markers='{{markers}}' scale='{{scale}}' latitude="{{lat}}" longitude="{{lng}}"></map>
+  <!-- <view wx:for="{{localList}}" wx:key="k">
+    <view class='local-item'>
+      <view class='local-head'>
+        <image src='../../images/loc.png' class='local-img'></image>
+        <view class="local-title">精度:{{item.radius}}</view>
+        <text class='local-time'>{{item.createDate}}</text>
+      </view>
+      <text class='local-msg'>{{item.address}}</text>
+    </view>
+  </view> -->
+  <view class="cu-timeline" wx:for="{{localList}}" wx:key="k">
+  <view class="cu-time" wx:if="{{item.status=='OFFLINE'}}" >精度:{{item.radius}}</view>
+  <view class="cu-item text-red cuIcon-attentionforbidfill">
+    <view class="content bg-red shadow-blur">
+      <text>{{item.createDate}}</text> {{item.address}}
+    </view>
+  </view>
+</view>
+</view>

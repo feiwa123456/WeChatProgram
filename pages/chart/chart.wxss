@@ -1,0 +1,271 @@
+page {
+  background: #efefef;
+}
+
+#page_top {
+  width: 100%;
+  /* background: -moz-linear-gradient(-45deg, #44b5d8 0%, #44b5d8 100%, #44b5d8 100%); 
+  background: -webkit-linear-gradient(-45deg, #44b5d8 0%,#44b5d8 100%,#44b5d8 100%); 
+  background: linear-gradient(135deg, #44b5d8 0%,#44b5d8 100%,#44b5d8 100%);  */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b4e391', endColorstr='#b4e391', GradientType=1);
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  margin: 5vw 0vw;
+}
+
+/* 
+一组按钮样式
+ */
+
+.groupButton {
+  color: #222;
+  font-family: "微软雅黑";
+  font-size: 4vw;
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: center;
+}
+
+.RealTime {
+  margin-left: 5.5vw;
+  flex-grow: 1;
+  background: #fff;
+  border: 1px solid #44b5d8;
+  padding: 2vw 5vw;
+  border-radius: 1vw;
+}
+
+.Historical_data {
+  margin: 0vw 5.5vw;
+  flex-grow: 1;
+  background: #fff;
+  border: 1px solid #44b5d8;
+  padding: 2vw 5vw;
+  border-radius: 1vw;
+}
+
+.btnSelected {
+  background: #70c8e2;
+}
+
+.circle {
+  position: fixed !important;
+  width: 10vw;
+  height: 10vw;
+  z-index: 9999;
+  right: 3vw;
+  background: #409eff;
+  border: 0 solid #409eff;
+  border-radius: 10vw;
+  text-align: center;
+}
+
+.circle text {
+  font-size: 6vw;
+  height: 10vw;
+  line-height: 10vw;
+}
+
+.firstcircle {
+  bottom: 3vw;
+}
+
+.secondcircle {
+  bottom: 15vw;
+}
+
+/* 
+循环样式
+ */
+
+.CycleCss {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  width: 90vw;
+  margin: 2vw 5vw 0vw 5vw;
+  font-size: 3.5vw;
+  border-radius: 2vw;
+  box-sizing: border-box;
+}
+
+/* 
+RealTime_icon样式
+ */
+
+.RealTime_icon {
+  margin: 5px 10px 5px 20px;
+}
+
+.RealTime_icon image {
+  margin-top: 1vw;
+  width: 9vw;
+  height: 9vw;
+}
+
+/* 
+RealTime_info样式
+ */
+
+.RealTime_info {
+  flex-grow: 1;
+  margin: 5px 5px 5px 0px;
+}
+
+.RealTime_CName {
+  margin-top: 1.5vw;
+}
+
+/* 
+RealTime_right样式
+ */
+
+.RealTime_right {
+  margin: 5px 20px 5px 0px;
+}
+
+.RealTime_lastval {
+  margin-top: 2.5vw;
+  text-align: center;
+  color: #44b5d8;
+}
+
+/* 
+历史数据的样式 
+ */
+
+#filter_box {
+  background: #fff;
+  height: 5vh;
+  position: absolute;
+  width: 100%;
+  line-height: 5vh;
+  z-index: 101;
+  left: 0;
+  top: 10vh;
+  color: #666;
+  padding-top: 1vh;
+}
+
+.filter_hide {
+  font-size: 3.5vw;
+  line-height: 5vh;
+  margin-left: 1vh;
+}
+
+.filter_hide text {
+  float: left;
+}
+
+#filterImages {
+  width: 2vh !important;
+  height: 2vh !important;
+  float: left !important;
+  background-size: 100% 100%;
+  padding: 1.5vh 0.5vw;
+}
+
+.filter_show {
+  width: 100%;
+  height: 5vh;
+  background-color: #fff;
+  line-height: 5vh;
+  /* border-bottom: 1px solid rgba(97, 196, 25, 1); */
+  padding-left: 5vw;
+}
+
+picker {
+  border: 1px rgba(253, 217, 102, 0.7);
+  border-radius: 5px;
+  width: 25vw;
+  height: 5vh;
+  float: left;
+}
+
+.filter_title {
+  float: left;
+  font-size: 3.5vw;
+}
+
+.switchTitle {
+  padding-left: 1vh;
+  margin-bottom: 3vh;
+  font-size: 16px;
+  color: #666;
+}
+
+#closeBtn {
+  width: 5vh;
+  height: 5vh;
+  background-size: 100% 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#queryBtn {
+  width: 15vw;
+  height: 4vh;
+  margin: 0.5vh;
+  line-height: 4vh;
+  float: left;
+  border-radius: 5px;
+}
+
+#queryBtn image {
+  width: 2.5vh;
+  height: 2.5vh;
+  float: left;
+  background-size: 100% 100%;
+  margin: 0.5vh;
+}
+
+#queryText {
+  width: 15vw;
+  text-align: center;
+  color: #36ab60;
+  font-size: 3.8vw;
+}
+
+.wx-switch-input {
+  width: 42px !important;
+  height: 20px !important;
+}
+
+.wx-switch-input::before {
+  width: 41px !important;
+  height: 20px !important;
+}
+
+.wx-switch-input::after {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+.pickerText {
+  text-align: center;
+  color: #87c38f;
+  font-size: 3.5vw;
+}
+
+.container {
+  background: #fff;
+  width: 100vw;
+  height: 84vh;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+ec-canvas {
+  background: #fff;
+  width: 100% !important;
+  height: 50% !important;
+}
+
+canvas {
+  background: #fff;
+  width: 100% !important;
+  height: 50% !important;
+}

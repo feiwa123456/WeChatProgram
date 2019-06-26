@@ -8,13 +8,17 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.1.1",
+	"libVersion": "2.2.3",
 	"appid": "wxd0336320ba6e33cc",
-	"projectname": "%E4%B8%AD%E6%B3%B0%E8%83%BD",
+	"projectname": "6-17",
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -33,13 +37,111 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
-					"id": -1,
+					"id": 0,
 					"name": "控制页面",
+					"pathName": "pages/controller/controller",
+					"query": "deviceName= 远程诱虫控制系统3&deviceCore=TimeCtrl_3",
+					"scene": null
+				},
+				{
+					"id": 0,
+					"name": "htcuuuu控制页面",
+					"pathName": "pages/controller/controller",
+					"query": "deviceName=htc uu 测试&deviceCore=uuuuuuuuu",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "地图",
+					"pathName": "pages/deviceMap/deviceMap",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "chart界面",
+					"pathName": "pages/chart/chart",
+					"query": "sensorId=833&deviceCore=ZY_TEST1",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "张华明测试控制页面",
 					"pathName": "pages/controller/index",
-					"query": "deviceName=张华明压力测试设备&deviceCore=dsfsadfgasdfg&serverMessage=b1qcqqib9FN&deviceId=iwfsZtxf2PrPpwRDDKro"
+					"query": "deviceName=htc uu 测试&deviceCore=uuuuuuuuu&serverMessage=b1qcqqib9FN",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "列表界面",
+					"pathName": "pages/deviceList/deviceList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "系统通知",
+					"pathName": "pages/notice/notice",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "传感器界面",
+					"pathName": "pages/sensors/sensors",
+					"query": "deviceCore=uuuuuuuuu",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "errorList页面",
+					"pathName": "pages/errorList/error",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "个人中心",
+					"pathName": "pages/center/center",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "上下线",
+					"pathName": "pages/deviceOnline/index",
+					"query": "deviceName=htc uu 测试&deviceCore=IS_La_02&serverMessage=b1qcqqib9FN",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "设备详情",
+					"pathName": "pages/deviceInfo/index",
+					"query": "deviceName=htc uu 测试&deviceCore=uuuuuuuuu&serverMessage=b1qcqqib9FN",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "登录",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "设备详情界面",
+					"pathName": "pages/deviceInfo/deviceInfo",
+					"query": "deviceCore=uuuuuuuuu",
+					"scene": null
+				},
+				{
+					"id": 13,
+					"name": "控制设备",
+					"pathName": "pages/controller/controller",
+					"query": "deviceName=远程诱虫控制系统3&deviceCore=TimeCtrl_3",
+					"scene": null
 				}
 			]
 		}

@@ -37,44 +37,5 @@ App({
   globalData: {
     userInfo: null
   },
-  openMessage: function() {
-    var _this =this;
-    wx.connectSocket({
-      url: 'wss://ztn-tech.com/wss',
-    })
-    wx.onSocketOpen(function(res) {
-      console.log('WebSocket连接已打开！');
-      var mCmd = {
-        "cmd": "bindUser",
-        "parameters": wx.getStorageSync("userid")
-      }
-      wx.sendSocketMessage({
-        data: JSON.stringify(mCmd),
-        success: function(ret) {
-          console.log('WebSocket监听成功！');
-        },
-        fail: function(err) {
-          console.log('WebSocket监听失败！');
-        }
-      })
-    })
-    wx.onSocketError(function(res) {
-      console.log('WebSocket连接打开失败，请检查！')
-    })
-    wx.onSocketMessage(function(res) {
-
-      var nowData = JSON.parse(res.data)
-      console.log('收到：' + nowData.val)
-      if (wx.getStorageSync('openMessage')) {
-        wx.showToast({
-          title: nowData.val,
-          icon: 'none',
-          duration: 700
-        })
-      }
-    })
-    wx.onSocketClose(function(res) {
-      console.log('WebSocket 已关闭！')
-    })
-  }
+  
 })

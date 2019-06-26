@@ -1,0 +1,43 @@
+.local-item {
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #888;
+  margin: 10px;
+  border: 1px solid #eee;
+  background: #fff;
+  padding: 5px;
+}
+
+.local-img {
+  width: 20px;
+  height: 20px;
+  float: left;
+}
+
+.local-title {
+  float: left;
+  font-size: 4vw;
+  margin-left: 5px;
+  line-height: 20px;
+  color: #f0f;
+}
+
+.local-time {
+  float: right;
+  font-size: 3vw;
+  line-height: 20px;
+  margin-right: 8px;
+}
+
+.local-head {
+  width: 100%;
+  height: 20px;
+}
+
+.local-msg {
+  font-size: 5vw;
+  margin: 5px;
+  color: #bfbfbf;
+  display: block;
+  letter-spacing: 2px;
+  padding: 30px 20px;
+}

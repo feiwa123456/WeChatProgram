@@ -1,0 +1,46 @@
+/* pages/signal.wxss */
+.all_sign{
+  display: flex;
+  height:18px;
+  border:1px solid transparent;
+  font-weight: bold;
+}
+text{
+  margin-right: 1vw;
+}
+.all_sign text{
+  line-height: 18px;
+
+}
+.view{
+  width:5px;
+  border:1px solid #0e2d5f;
+
+}
+.first-view{
+  height:3px;
+  margin-top: 12px;
+
+}
+.second-view{
+ height:6px;
+ margin-top: -6px;
+ margin-left:6px;
+}
+.third-view{
+  height:9px;
+  margin-top: -9px;
+  margin-left:12px
+}
+.fourth-view{
+  height:12px;
+  margin-top: -12px;
+  margin-left:18px;
+
+}
+.fifth-view{
+  height:15px;
+  margin-top: -15px;
+  margin-left:24px;
+
+}

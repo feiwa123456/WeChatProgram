@@ -1,0 +1,164 @@
+.main{
+  background: #a8d4f8;
+  height: 100vh;
+}
+
+map{
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-bottom:65px;
+}
+.list_top{
+  width: 100%;
+  height: 15vh;
+  padding: 1vw 5vw;
+}
+.pickerText{
+  text-align: center;
+  color: #FFF;
+}
+.list{
+  height: 70vh;
+}
+.device_list_box{
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 70vh;
+  border-top: 1px solid #ededed;
+  margin-bottom:47px;
+  background-color: #fff;
+}
+.device_list_box_show{
+  left: 0;
+}
+.device_list_box_hide{
+  left: -100vw;
+}
+
+.down_icon{
+  width: 5vw;
+  height: 5vw;
+  background-size: 100% 100%;
+  margin: 0 47.5vw;
+}
+.flex-item{
+  width: 100%;
+  height:27vw;
+  font-size: 3.5vw;
+  border-bottom: 1px solid #ededed;
+  padding: 2vw 3vw;
+  position: relative;
+}
+.device_icon{
+  width: 15vw;
+  height: 15vw;
+  float: left;
+}
+.device_info{
+  float: left;
+  margin-left: 5vw;
+  margin-top: 1.5vw;
+  width: 70vw;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden;
+}
+.device_state{
+  float: right;
+  height: 7.5vw;
+  line-height: 7.5vw;
+  margin-top: 1.5vw;
+  position: absolute;
+  top: 0;
+  right: 4vw;
+}
+.device_status{
+  text-align: center;
+  padding: 0 4vw;
+}
+.device_state_btn{
+  text-align: center;
+  padding: 0 5vw;
+}
+.region_btn{
+  height: 31px;
+  line-height: 30px;
+  text-align: center;
+  width: 20vw;
+  float: right;
+}
+.map_list_btn{
+  height: 25px;
+  color: #fff;
+  float: right;
+  font-size: 12px;
+  padding: 4px 12px 0 10px;
+  margin-right: 10px;
+  margin-top: 1vw;
+}
+.map_list_icon{
+  float: left;
+  width: 12px;
+  height: 12px;
+  margin: 1.5px 0px;
+  margin-right: 5px;
+}
+.map_list_text{
+  float: right;
+}
+.back_color_blue{
+  background-color: #1296db;
+}
+.back_color_green{
+  background-color: #2aa515;
+}
+.item_image{
+  width: 8vw;
+  height: 8vw;
+  background-size: 100% 100%;
+  border: 1px solid #FFFFFF;
+  background: #FFFFFF;
+  border-radius: 50%;
+  padding: 3.5vw;
+  margin: 1vw 4vw;
+  position: fixed;
+  bottom: 4vw;
+  right: 1vw;
+  
+}
+.search_box{
+  width: 100%;
+  border:1px solid #FFF;
+  border-radius: 20px;
+  height: 28px;
+}
+.search_icon_img{
+  width: 28px;
+  height: 28px;
+  float: left;
+  margin: 3px;
+}
+.search_input{
+  font-size: 3vw;
+  height: 28px;
+  line-height: 28px;
+  width: 80%;
+  float: left;
+}
+.flex_box{
+  display: flex;
+}
+.OFFLINE {
+  color: #f56c6c;
+}
+
+.ONLINE {
+  color: #67c23a;
+}
+
+.UNACTIVE {
+  color: #1e9fff;
+}

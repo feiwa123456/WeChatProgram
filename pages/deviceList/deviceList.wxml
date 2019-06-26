@@ -1,0 +1,106 @@
+<view class='list_top cu-bar fixed'>
+  <view class='status_css'>
+    <picker bindchange="statusChange" range='{{statusArray}}'>
+      <view>{{statusText}}</view>
+    </picker>
+  </view>
+  <view class='search_box'>
+    <picker range='{{productList}}' bindchange='productChange'>
+      <view>{{product}}</view>
+    </picker>
+  </view>
+  <text class="cuIcon-searchlist text-gray" bindtap='showSearch' style="font-size:40px"></text>
+</view>
+<view bindtap="handle" class="circle firstcircle">
+  <picker range='{{pageList}}' bindchange='pageChange'>
+    <text class="cuIcon-list text-white"></text>
+  </picker>
+</view>
+<view class="cu-modal {{ showDialog ? 'show' : '' }}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">搜索设备名</view>
+      <view class="action" bindtap="noSearch">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      <input value="{{searchName}}" bindinput="nameChange" placeholder='输入设备名'></input>
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-blue text-blue" bindtap="noSearch" data-name="{{searchName}}">取消</button>
+        <button class="cu-btn bg-blue margin-left" bindtap="search">确定</button>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='renew-text'>下拉刷新哦</view>
+<block wx:for="{{deviceList}}" wx:key="k">
+  <view class="flex-item">
+    <view class="device_firstInfo">
+      <view class='device_icon'>
+        <image src='{{item.deviceIcon}}' bindtap='deviceSensor' data-deviceCore='{{item.deviceCore}}'></image>
+      </view>
+      <view wx:if="{{item.warnNum!=0}}" class="cu-capsule device_icon">
+        <view class="cu-tag bg-yellow">
+          警告
+        </view>
+        <view class="cu-tag line-yellow">
+          {{item.warnNum}}
+        </view>
+      </view>
+      <signal id='signal' count="{{item.count}}" status="{{item.deviceStatus}}" signal="{{item.signal}}"></signal>
+      <surplus id=" " surplus="{{item.surplus}}"></surplus>
+    </view>
+
+    <view class="second-part">
+
+      <view class='device_info' bindtap='deviceSensor' data-productId='{{item.productId}}' data-name="{{item.deviceName}}" data-deviceCore='{{item.deviceCore}}' data-serverMessage='{{item.serverMessage}}' data-deviceId='{{item.deviceId}}'>
+        <view class='deviceNameCss'>{{item.deviceName}}</view>
+        <view>{{item.deviceCore}}</view>
+        <view class='deviceAddrCss'>{{item.deviceAddr}}</view>
+      </view>
+      <view class='device_right'>
+        <view class='{{item.status}}'>{{item.deviceStatus}}</view>
+
+        <view class='deviceImage'>
+          <image src='../../images/dw.png' bindtap='changeLayout' id="{{item.deviceCore}}" wx:if="{{isShow==''}}"></image>
+          <image src='../../images/up.png' bindtap='changeLayout' id="{{item.deviceCore}}" wx:elif="{{isShow==item.deviceCore}}"></image>
+          <image src='../../images/dw.png' bindtap='changeLayout' id="{{item.deviceCore}}" wx:else></image>
+        </view>
+      </view>
+      <!-- 五个按钮 -->
+      <view wx:if="{{isShow==item.deviceCore}}" class='device_five_Button'>
+        <view class='list_btn ' data-lat="{{item.deviceLat}}" data-lng="{{item.deviceLng}}" data-name="{{item.deviceName}}" data-addr="{{item.deviceAddr}}" bindtap='navigation'>
+          <view class='list_view'>
+            <text class="cuIcon-activityfill lg text-white"></text>
+          </view>
+        </view>
+        <view class='list_btn ' bindtap='deviceInfo' data-deviceCore='{{item.deviceCore}}'>
+          <view class='list_view'>
+            <text class="cuIcon-newsfill lg text-white"></text>
+          </view>
+        </view>
+        <view class='list_btn ' bindtap='deviceLocal' data-deviceCore='{{item.deviceCore}}'>
+          <view class='list_view'>
+            <text class="cuIcon-global lg text-white"></text>
+          </view>
+        </view>
+        <view class='list_btn ' bindtap='deviceOnline' data-deviceCore='{{item.deviceCore}}'>
+          <view class='list_view'>
+            <text class="cuIcon-order lg text-white"></text>
+          </view>
+        </view>
+        <view bindtap='deviceController' data-productId='{{item.productId}}' data-name="{{item.deviceName}}" data-deviceCore='{{item.deviceCore}}' data-serverMessage='{{item.serverMessage}}' data-deviceId='{{item.deviceId}}'>
+          <view class='list_view'>
+            <text class="cuIcon-settings lg text-white"></text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='cb'></view>
+  </view>
+</block>
+<view style="height:50px"></view>

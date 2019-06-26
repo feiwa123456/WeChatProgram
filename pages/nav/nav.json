@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "home": "/pages/home/home",
+    "device_map": "/pages/deviceMap/deviceMap",
+    "device_list": "/pages/deviceList/deviceList",
+    "center": "/pages/center/center"
+  }
+}

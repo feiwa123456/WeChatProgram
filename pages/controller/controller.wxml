@@ -1,0 +1,163 @@
+<wxs module="filter" src="../../utils/numtobool.wxs"></wxs>
+<view bindtap="handleGetCam" class="circle firstcircle">
+  <text class="cuIcon-camera text-white "></text>
+</view>
+<view id='page_top' wx:if="{{!showVideo}}">
+  <image src='../../images/controller.png'></image>
+  <view id='device_name'>{{deviceName}}</view>
+  <view class='cb'></view>
+</view>
+<view class="weui-flex" wx:if="{{showVideo}}">
+  <view class="weui-flex__item">
+    <view class="placeholder">
+      <live-player id="liveplayer" src="{{playurl}}" mode="live" autoplay bindstatechange="statechange" binderror="error" muted="{{isintercomon}}" orientation='{{ishorizontal?"horizontal":"vertical"}}' object-fit='{{ishorizontal?"fillCrop":"contain"}}' style="width: 100%;height=100%;">
+        <cover-view class="controls" bindtap='hiddenaction' style='top: {{ishorizontal?top:0}};'>
+          <cover-view class='toolview' hidden='{{ishidden?true:false}}'>
+            <cover-view class="play" hidden='{{ishorizontal?true:false}}' bindtap="play">
+              <cover-image class="img" src='{{playing?pauseurl:playingurl}}' />
+            </cover-view>
+            <!-- <cover-view class="fullscren" bindtap="fullscren">
+              <cover-image class="img" src='{{ishorizontal?fullscreenurl:fullscreenurl}}' />
+            </cover-view> -->
+          </cover-view>
+        </cover-view>
+      </live-player>
+    </view>
+  </view>
+</view>
+<block wx:for="{{returndata}}">
+  <view class="{{item.settingType!=6?'singleView':'singleButtonView'}}">
+    <view class='singleFirstImage' wx:if="{{item.settingType !=6}}">
+      <image src='../../images/need.png'></image>
+    </view>
+    <view class='singleTestView' wx:if="{{item.settingType !=6}}">
+       <view class="cu-capsule">
+        <view class="cu-tag bg-blue ">
+          {{item.settingName}}
+        </view>
+        <view class="cu-tag line-blue">
+          端口:{{item.port}}
+        </view>
+      </view>
+      <view wx:if="{{item.settingType=='0'}}">
+        <template is="custom" data="{{item}}"></template>
+      </view>
+      <view wx:elif="{{item.settingType=='1'}}">
+        <template is="fixed" data="{{SelectArray,SelectIndex,item}}"></template>
+      </view>
+      <view wx:elif="{{item.settingType=='2'}}">
+        <template is="switch" data="{{item}}"></template>
+      </view>
+      <view wx:elif="{{item.settingType=='3'}}">
+        <template is="timeSet" data="{{item}}"></template>
+      </view>
+      <view wx:elif="{{item.settingType=='4'}}">
+        <template is="periodTime" data="{{multiArray,multiIndex,item}}"></template>
+      </view>
+      <view wx:elif="{{item.settingType=='5'}}">
+        <template is="nop" data="{{item}}"></template>
+      </view>
+    </view>
+    <view wx:else style='margin:0px 10px'>
+      <view class="cu-capsule">
+        <view class="cu-tag bg-blue ">
+          {{item.settingName}}
+        </view>
+        <view class="cu-tag line-blue">
+          端口:{{item.port}}
+        </view>
+      </view>
+      <template is="OnAndOff" data="{{item}}"></template>
+    </view>
+    <view class='singleSecondImage' wx:if="{{item.settingType !=6}}">
+      <image src='../../images/dw.png' bindtap='changeLayout' id="{{item.settingId}}" wx:if="{{isShow==''}}"></image>
+      <image src='../../images/up.png' bindtap='changeLayout' id="{{item.settingId}}" wx:elif="{{isShow==item.settingId}}"></image>
+      <image src='../../images/dw.png' bindtap='changeLayout' id="{{item.settingId}}" wx:else></image>
+    </view>
+    <view class='singleInputView' wx:if="{{item.settingType !='6' && isShow==item.settingId}}">
+      <view class='aGroupSelect'>
+        <input class='type_input_Css ' bindchange="portChange" data-settingId="{{item.settingId}}" data-childPort='{{item.childPort}}' data-setting='{{item.setting}}' data-val="{{item.val}}" placeholder="{{item.port}}" style="text-align:center"></input>
+        <input class='type_input_Css ' bindchange="childportChange" data-settingId="{{item.settingId}}" data-setting='{{item.setting}}' data-val="{{item.val}}" data-port='{{item.port}}' placeholder="{{item.childPort}}" style="text-align:center"></input>
+      </view>
+      <view class='cb'></view>
+    </view>
+  </view>
+</block>
+
+<view class="cu-modal drawer-modal justify-start {{showCamList?'show':''}}" bindtap="hideModal">
+  <view class="cu-dialog basis-lg" style="top:{{CustomBar}}px;height:calc(100vh - {{CustomBar}}px)">
+    <view class="cu-list menu text-left">
+      <view class="cu-item arrow" wx:for="{{cams}}" wx:key data-hid='{{item.hid}}' data-dataserver='{{item.dataserver}}' catchtap="camTap">
+        <view class="content">
+          <view>{{item.hid}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 开关量 -->
+<template name="switch">
+  <view class='switchView'>
+    <switch checked="{{filter.numToBool(item.val)}}" bindchange="switchChange" data-settingId='{{item.settingId}}' data-setting='{{item.setting}}' data-port='{{item.port}}' data-childPort='{{item.childPort}}' color="#70c8e2"></switch>
+  </view>
+</template>
+
+
+<!-- 自定义 -->
+<template name="custom">
+  <view class='custom'>
+    <input class='custominput' type='text' bindinput="cusTomInput" data-settingId='{{item.settingId}}' data-setting='{{item.setting}}' data-port='{{item.port}}' data-childPort='{{item.childPort}}' value="{{item.val}}"></input>
+    <button type='primary' size='mini' bindtap="customBtnClick">确认</button>
+  </view>
+</template>
+
+<!-- 无参数命令 -->
+<template name="nop">
+  <view class='nopView'>
+    <button type='primary' size='mini' bindtap="nopBtnClick" data-settingId='{{item.settingId}}' data-port='{{item.port}}' data-setting='{{item.setting}}' data-childPort='{{item.childPort}}'>{{item.settingName}}</button>
+  </view>
+</template>
+
+<!-- 定时设置 -->
+<!-- class Timepicker -->
+<template name="timeSet">
+  <view class='TimeView'>
+    <picker mode="time" value="{{item.val}}" bindchange="bindTimeChange" bindtap='tap' data-settingId="{{item.settingId}}" data-setting='{{item.setting}}' data-port='{{item.port}}' data-childPort='{{item.childPort}}'>
+      <view>{{item.val}}</view>
+    </picker>
+  </view>
+</template>
+
+
+<!-- 时间段设置 -->
+<template name="periodTime">
+  <view class='TimeView'>
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" data-settingId="{{item.settingId}}" data-setting='{{item.setting}}' data-port='{{item.port}}'
+      data-childPort='{{item.childPort}}'>
+      <view>{{item.val}}</view>
+      <button type='primary' size='mini'></button>
+    </picker>
+  </view>
+</template>
+
+<!-- 固定参数 -->
+<template name="fixed">
+  <picker bindchange="bindSelectPickerChange" value="{{SelectIndex}}" range="{{SelectArray}}" data-settingId="{{item.settingId}}" data-setting='{{item.setting}}' data-port='{{item.port}}' data-childPort='{{item.childPort}}'>
+    <view class='fixCss'>
+      <input class="fixedinput" type='text' value='{{item.val}}'></input>
+      <button type='primary' size='mini' bindtap='choseParameter' data-settingId='{{item.settingId}}'>选择参数</button>
+    </view>
+  </picker>
+</template>
+
+<!--多个按钮 开关-->
+<template name="OnAndOff">
+  <view class='OnAndOffView'>
+    <button style='padding-left: 10px;padding-right: 10px;background-color: #e27070;' size='mini' bindtap="btnGroupSetting" data-item="{{item}}" data-item2="{{item2}}" wx:for="{{(item2,index2) in item.setting}}" wx:for="{{item.setting}}" wx:for-index="index2"
+      wx:for-item="item2" :key="{{index2}}" wx:if="{{item2.now}}">{{item2.cName}}</button>
+    <button style='padding-left: 10px;padding-right: 10px;background-color:#70c8e2;' size='mini' bindtap="btnGroupSetting" data-item="{{item}}" data-item2="{{item2}}" wx:for="{{(item2,index2) in item.setting}}" wx:for="{{item.setting}}" wx:for-index="index2"
+      wx:for-item="item2" :key="{{index2}}" wx:if="{{!item2.now}}">{{item2.cName}}</button>
+  </view>
+</template>

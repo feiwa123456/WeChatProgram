@@ -1,0 +1,71 @@
+
+
+<view id='page_top'>
+  <view class='groupButton '>
+    <cover-view class='RealTime {{RealTimeShow==true?"btnSelected":""}}' bindtap='RealTimeSelected'>实时监控</cover-view>
+    <cover-view class='Historical_data {{RealTimeShow==false?"btnSelected":""}}' bindtap='HistoricalSelected'>历史数据</cover-view>
+  </view>
+</view>
+<!-- 
+实时监控
+ -->
+<view wx-if="{{RealTimeShow}}">
+  <block wx:for="{{RealTimeList}}" wx:key="k">
+    <view class='CycleCss'>
+      <view class='RealTime_icon'>
+        <image src='https://ztn-tech.com/public/static/wechar-resource/{{item.iocUrl}}'></image>
+      </view>
+      <view class='RealTime_info'>
+        <view class='RealTime_CName'>{{item.cName}}</view>
+        <view class='RealTime_time'>{{item.lastDateTime}}</view>
+      </view>
+      <view class='RealTime_right'>
+        <view class='RealTime_lastval'>{{item.lastVal}}{{item.unit}}</view>
+      </view>
+    </view>
+  </block>
+
+  <view bindtap="handleGetData" class="circle firstcircle">
+    <text class="cuIcon-noticefill text-white "></text>
+  </view>
+  <view bindtap="handleGo2Set" class="circle secondcircle">
+    <text class="cuIcon-settings text-white"></text>
+  </view>
+
+</view>
+
+<!-- 
+历史数据
+ -->
+<view wx:else>
+  <view id='filter_box'>
+    <view class='filter_hide' wx:if="{{!filterShow}}">
+      <text bindtap='showFilter'>筛选</text>
+      <image id='filterImages' src='../../images/right_while.png' bindtap='showFilter'></image>
+      <view class='cb'></view>
+    </view>
+    <view class='filter_show' wx:if="{{filterShow}}">
+      <text class='filter_title'>日期筛选:</text>
+      <picker mode="date" bindchange='startDateChange'>
+        <view class='pickerText'>{{startDate}}</view>
+      </picker>
+      <text class='pickerText' style='float: left;'>-</text>
+      <picker mode="date" bindchange='endDateChange'>
+        <view class='pickerText'>{{endDate}}</view>
+      </picker>
+      <view id='queryBtn' bindtap='getData'>
+        <image src='../../images/query.png'></image>
+        <view id='queryText'>查询</view>
+      </view>
+      <image id='closeBtn' src='../../images/closeBtn.png' bindtap='closeFilter'></image>
+      <view class='cb'></view>
+    </view>
+  </view>
+  <view class="container">
+    <view class='cb '></view>
+
+    <block wx:for="{{chartList}}" wx:key="k">
+      <ec-canvas id="{{item.id}}" canvas-id="{{item.canvas}}" ec="{{ec}}"></ec-canvas>
+    </block>
+  </view>
+</view>

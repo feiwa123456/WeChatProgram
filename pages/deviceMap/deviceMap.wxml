@@ -1,0 +1,43 @@
+<view class="main">
+  <view class='list_top'>
+    <view style='width:90%;margin:0 auto'>
+      <picker class='search_box typePicker' id='typePicker' range='{{typeList}}' bindchange='typeChange' value='{{nowVal}}'>
+        <text class="cuIcon-search text-gray search_icon_img" bindtap='showSearch'style="font-size:23px" ></text>
+        <view id='pickerText' class='search_input pickerText'>{{deviceType}}</view>
+        <block class='cb'></block>
+      </picker>
+    </view>
+    <block class='cb'></block>
+  </view>
+  <map style="height:{{mapHeight}}" id='myMap' bindregionchange="onMapChange" markers='{{markers}}' scale='{{scale}}' bindmarkertap="markertap" polyline="{{polyline}}">
+  </map>
+  <view id='device_list_box' class="device_list_box {{showView?'device_list_box_show':'device_list_box_hide'}}">
+    <view bindtap="hideList">
+      <image class='down_icon' src='../../images/down.png'></image>
+    </view>
+      <scroll-view id='list_box' scroll-top="{{scrollTop}}" scroll-y="true" class="list" bindscrolltolower="bindDownLoad" bindscrolltoupper="topLoad" bindscroll="scroll">
+        <view class="flex-item" wx:for="{{deviceList}}" wx:key="k">
+          <image class='device_icon' src='{{item.deviceIcon}}' bindtap='deviceSensor' data-deviceId='{{item.deviceId}}' data-deviceCore='{{item.deviceCore}}'></image>
+          <view class='device_info' bindtap='deviceSensor' data-deviceId='{{item.deviceId}}' data-deviceCore='{{item.deviceCore}}'>
+            <view>{{item.deviceName}}</view>
+            <view>{{item.deviceCore}}</view>
+            <view>{{item.deviceAddr}}</view>
+          </view>
+          <view class='device_state'>
+            <view class='device_status {{item.status}}'>{{item.deviceState}}</view>
+          </view>
+          <view class='cb'></view>
+          <view>
+            <view class='map_list_btn back_color_green' bindtap='deviceController' data-productId='{{item.productId}}' data-name="{{item.deviceName}}" data-deviceCore='{{item.deviceCore}}' data-serverMessage='{{item.serverMessage}}' data-deviceId='{{item.deviceId}}'>
+              <image class='map_list_icon' src='../../images/controller.png'></image>
+              <view class='map_list_text'>控制</view>
+            </view>
+            <view class='map_list_btn back_color_blue' data-lat="{{item.deviceLat}}" data-lng="{{item.deviceLng}}" data-name="{{item.deviceName}}" data-addr="{{item.deviceAddr}}" bindtap='navigation'>
+              <image class='map_list_icon' src='../../images/guide.png'></image>
+              <view class='map_list_text'>导航</view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+  </view>
+</view>

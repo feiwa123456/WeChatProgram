@@ -1,0 +1,52 @@
+<!--pages/signal.wxml-->
+<view class="all_sign">
+  <text>-{{signal}}dBm</text>
+  <view wx:if="{{status!='在线'}}" class="view_sign">
+    <view class="view first-view "></view>
+    <view class="view second-view"></view>
+    <view class="view third-view" ></view>
+    <view class="view fourth-view"></view>
+    <view class="view fifth-view" ></view>
+  </view>
+
+
+  <view wx:if="{{count == 1 && status=='在线'}}" class="view_sign">
+    <view class="view first-view " style="background-color:#FF0000"></view>
+    <view class="view second-view"></view>
+    <view class="view third-view" ></view>
+    <view class="view fourth-view"></view>
+    <view class="view fifth-view" ></view>
+  </view>
+
+  <view  wx:elif="{{count == 2 && status=='在线'}}" class="view_sign">
+    <view class="view first-view " style="background-color:#FF0000"></view>
+    <view class="view second-view" style="background-color:#FF0000"></view>
+    <view class="view third-view" ></view>
+    <view class="view fourth-view"></view>
+    <view class="view fifth-view" ></view>
+  </view>
+
+  <view  wx:elif="{{count == 3 && status=='在线'}}" class="view_sign">
+    <view class="view first-view " style="background-color:#00FF00"></view>
+    <view class="view second-view" style="background-color:#00FF00"></view>
+    <view class="view third-view" style="background-color:#00FF00"></view>
+    <view class="view fourth-view"></view>
+    <view class="view fifth-view" ></view>
+  </view>
+
+  <view  wx:elif="{{count == 4 && status=='在线'}}" class="view_sign">
+    <view class="view first-view " style="background-color:#00FF00"></view>
+    <view class="view second-view" style="background-color:#00FF00"></view>
+    <view class="view third-view" style="background-color:#00FF00"></view>
+    <view class="view fourth-view" style="background-color:#00FF00"></view>
+    <view class="view fifth-view"></view>
+  </view>
+
+  <view  wx:elif="{{count == 5 && status=='在线'}}" class="view_sign">
+    <view class="view first-view " style="background-color:#00FF00"></view>
+    <view class="view second-view" style="background-color:#00FF00"></view>
+    <view class="view third-view" style="background-color:#00FF00"></view>
+    <view class="view fourth-view" style="background-color:#00FF00"></view>
+    <view class="view fifth-view" style="background-color:#00FF00"></view>
+  </view>
+</view>

@@ -1,0 +1,73 @@
+/* pages/surplus/surplus.wxss */
+
+.view {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+text{
+  margin-right: 1vw;
+}
+
+.battery-icon {
+  height: 12px;
+  width: 22px;
+  top: -1px;
+  background-color: #fff;
+  border: 2px solid #000;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+.battery-icon:after, .battery-icon:before {
+  background: #000;
+  content: '';
+  position: absolute;
+}
+
+.battery-icon:before {
+  width: 2px;
+  bottom: 1px;
+  right: -4px;
+  top: 1px;
+}
+
+.battery-icon:after {
+  bottom: 2px;
+  left: 2px;
+  top: 2px;
+}
+
+.hundred-percent:after {
+  right: 2px;
+}
+
+.seventy-five-percent:after {
+  right: 6px;
+}
+
+.fifty-percent:after {
+  right: 10px;
+}
+
+.twenty-five-percent:after {
+  right: 16px;
+}
+
+.ten-percent:after {
+  right: 18px;
+  background-color: red;
+  border-color: red;
+}
+
+.charging:after {
+  content: "⌁";
+  top: -12px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: none;
+  font-size: 25px;
+  text-align: center;
+}

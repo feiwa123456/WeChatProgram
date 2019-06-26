@@ -1,0 +1,34 @@
+<home wx:if="{{PageCur=='home'}}"></home>
+<device_map wx:if="{{PageCur=='device_map'}}" ></device_map>
+<device_list wx:if="{{PageCur=='deviceList'}}" id="deviceListId"></device_list>
+<center wx:if="{{PageCur=='center'}}"></center>
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action" bindtap="NavChange" data-cur="home">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/home{{PageCur=='home'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='home'?'text-green':'text-gray'}}">首页</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="device_map">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/map{{PageCur=='device_map'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='device_map'?'text-green':'text-gray'}}">地图</view>
+  </view>
+  <view class="action text-gray add-action">
+      <button class="cu-btn cuIcon-scan bg-blue shadow" bindtap='seeDevice'></button>
+      扫描
+    </view>
+  <view class="action" bindtap="NavChange" data-cur="deviceList">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/deviceList{{PageCur=='deviceList'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='deviceList'?'text-green':'text-gray'}}">列表</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="center">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/center{{PageCur=='center'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='center'?'text-green':'text-gray'}}">个人</view>
+  </view>
+</view>

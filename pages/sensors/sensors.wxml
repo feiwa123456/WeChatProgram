@@ -1,0 +1,37 @@
+<scroll-view scroll-y class="scrollPage">
+  <view class="cu-card">
+    <view class="cu-item shadow-blur" catchtap="camTap" data-hid='{{item.hid}}' data-dataserver='{{item.dataserver}}' wx:for="{{cams}}" wx:key>
+      <view class="cu-capsule cardTitle2 margin-top-xs">
+        <view class="cu-tag bg-blue ">
+          监控
+        </view>
+        <view class="cu-tag line-blue">
+          {{item.cameraId}}
+        </view>
+      </view>
+      <image class='sensor_icon' src='https://ztn-tech.com/public/static/wechar-resource/sensor_icon/camera.png'></image>
+      <view class="cardTitle">
+        {{item.hid}}
+      </view>
+    </view>
+    <view class="cu-item shadow-blur" bindtap='showCharts' data-sensorid='{{item.sensorId}}' wx:for="{{sensorsList}}" wx:key>
+      
+      <view class="cu-capsule margin-top-xs cardTitle2" >
+        <view class="cu-tag bg-blue   ">
+          {{item.type}}
+        </view>
+        <view class="cu-tag line-blue ">
+          {{item.sensorId}}
+        </view>
+        <view class="cardTitle2">
+        端口:{{item.port}}
+      </view>
+      </view>
+      <image class='sensor_icon' src='https://ztn-tech.com/public/static/wechar-resource/{{item.iocUrl}}'></image>
+      <view class="cardTitle">
+        {{item.sensorName}}
+      </view>
+    </view>
+  </view>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>

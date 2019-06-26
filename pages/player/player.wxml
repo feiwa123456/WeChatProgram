@@ -1,0 +1,83 @@
+<view class="page">
+  <view class="page__bd page__bd_spacing">
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <view class="placeholder">
+          <live-player id="liveplayer" src="{{playurl}}" mode="live" autoplay bindstatechange="statechange" binderror="error" muted="{{isintercomon}}" orientation='{{ishorizontal?"horizontal":"vertical"}}' object-fit='{{ishorizontal?"fillCrop":"contain"}}' style="width: 100%;height=100%;">
+            <cover-view class="controls" bindtap='hiddenaction' style='top: {{ishorizontal?top:0}};'>
+              <cover-view class='toolview' hidden='{{ishidden?true:false}}'>
+                <cover-view class="play" hidden='{{ishorizontal?true:false}}' bindtap="play">
+                  <cover-image class="img" src='{{playing?pauseurl:playingurl}}' />
+                </cover-view>
+
+                <cover-view class="fullscren" bindtap="fullscren">
+                  <cover-image class="img" src='{{ishorizontal?fullscreenurl:fullscreenurl}}' />
+                </cover-view>
+              </cover-view>
+
+            </cover-view>
+          </live-player>
+        </view>
+      </view>
+    </view>
+    <view class='textview' style='display:flex;flex-direction: row;'>
+      <label class='textlable' wx:if="{{showTopTips}}">{{text}}</label>
+    </view>
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <view class="placeholder">
+          <view class="weui-flex">
+            <view class="weui-flex__item">
+              <button class="weui-btn " type="default"  bindtap='pictureAction' data-label="{{isavqon?'高清':'超清'}}">{{isavqon?"高清":"超清"}}</button>
+            </view>
+            <view class="weui-flex__item">
+              <button class="weui-btn " type="default"  bindtap='muteAction' data-label="{{isintercomon?'声音开':'声音关'}}">{{isintercomon?"声音开":"声音关"}}</button>
+            </view>
+          </view>
+          <view class="weui-flex">
+            <view class="weui-flex__item">
+              <button class="weui-btn " type="default"  id='17' bindtap='clickbtnAction' data-label="聚焦远">聚焦远</button>
+            </view>
+            <view class="weui-flex__item">
+              <button class="weui-btn " type="default"  id='18' bindtap='clickbtnAction' data-label="聚焦近">聚焦近</button>
+            </view>
+          </view>
+          <view class="weui-flex">
+            <view class="weui-flex__item">
+              <button class="weui-btn mini-btn" type="default"  id='5' bindtap='clickbtnAction' data-label="图像放大">放大</button>
+            </view>
+            <view class="weui-flex__item">
+              <button class="weui-btn mini-btn" type="default"  id='6' bindtap='clickbtnAction' data-label="图像缩小">缩小</button>
+            </view>
+          </view>
+          <view class="weui-flex">
+            <view class="weui-flex__item">
+              <button class="weui-btn" type="default"  id='15' bindtap='clickbtnAction' data-label="镜像">镜像</button>
+            </view>
+            <view class="weui-flex__item">
+              <button class="weui-btn" type="default"  id='16' bindtap='clickbtnAction' data-label="翻转">翻转</button>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="weui-flex__item" style='margin-left: 10px;margin-top: 10px;'>
+        <view class="placeholder" >
+          <image class="remotecontrol" style="display:flex;flex-direction: row;width : 150px; height : 150px;float: right;">
+            <view class="topbtnview" style="display:flex;flex-direction: row;width : 150px; height : 50px;">
+              <image id='3' data-label="向上" bindtap='clickbtnAction' class='topbtn' src="{{videotopurl}}"></image>
+            </view>
+            <view class="midbtnview" style="display:flex;flex-direction: row;width : 150px; height : 50px;">
+              <image id='1' data-label="向左" bindtap='clickbtnAction' class='midleftbtn' src="{{videolefturl}}"></image>
+              <view class="midokview"></view>
+              <image id='2' data-label="向右" bindtap='clickbtnAction' class='midrightbtn' src="{{videorighturl}}"></image>
+            </view>
+            <view class="boombtnview" style="display:flex;flex-direction: row;width : 150px; height : 50px;">
+              <image id='4' data-label="向下" bindtap='clickbtnAction' class='boombtn' src="{{videoboomurl}}"></image>
+            </view>
+          </image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <audio id='myaudio' src='{{audiourl}}'></audio>
+</view>

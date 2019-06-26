@@ -1,0 +1,22 @@
+<view class="cu-card dynamic" wx:for="{{notices}}" wx:key="k">
+  <view class="cu-item shadow">
+    <view class="cu-list menu-avatar comment solids-top">
+      <view class="cu-item">
+        <view class="cu-avatar round" style="background-image:url(../../images/warn.png);"></view>
+        <view class="content">
+          <view class="text-grey">{{item.title}}</view>
+          <view class="text-gray text-content text-df">
+            {{item.msg}}
+          </view>
+          <view class="margin-top-sm flex justify-between">
+            <view class="text-gray text-df">{{item.publicTime}}</view>
+            <view>
+              <text class="cuIcon-appreciatefill text-red"></text>
+              <text class="cuIcon-messagefill text-gray margin-left-sm"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

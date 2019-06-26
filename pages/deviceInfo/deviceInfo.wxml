@@ -1,0 +1,76 @@
+<view class="section">
+  <map style="height:{{mapHeight}};width: 100%;" id='myMap' bindregionchange="onMapChange" markers='{{markers}}' scale='{{scale}}' latitude="{{lat}}" longitude="{{lng}}"></map>
+  <image class='device_icon' src='{{iocUrl}}'></image>
+  <view class='title'>
+    <view class='name'>{{deviceName}}</view>
+    <view class='core'>{{deviceCore}}</view>
+  </view>
+  <view class="line">
+    <text>{{status}}</text>
+  </view>
+  <form>
+    <view class="cu-form-group margin-top">
+      <view class="title">物联网卡号：</view>
+      <input value="{{phoneNumber}}"></input>
+    </view>
+    <view class="cu-form-group margin-top">
+      <view class="title">设备服务：</view>
+      <input value="{{serverMessage}}"></input>
+    </view>
+    <view class="cu-form-group margin-top">
+      <view class="title">设备ID：</view>
+      <input value="{{aliDeviceId}}"></input>
+    </view>
+    
+    <view class="cu-form-group margin-top">
+      <view class="title">设备秘钥：</view>
+      <input value="{{aliDeviceSecret}}"></input>
+    </view>
+    
+    <view class="cu-form-group margin-top">
+      <view class="title">设备信息：</view>
+      <input value="{{remark}}"></input>
+    </view>
+    
+    <view class="cu-form-group margin-top">
+      <view class="title">创建日期：</view>
+      <input value="{{createDate}}"></input>
+    </view>
+     <view class="cu-form-group margin-top">
+      <view class="title">销售情况：</view>
+      <input value="{{isSell}}"></input>
+    </view>
+     <view class="cu-form-group margin-top">
+      <view class="title">销售时间：</view>
+      <input value="{{sellTime}}"></input>
+    </view>
+     <view class="cu-form-group margin-top">
+      <view class="title">离线次数：</view>
+      <input value="{{offLineNum}}"></input>
+    </view>
+     <view class="cu-form-group margin-top">
+      <view class="title">离线时间：</view>
+      <input value="{{lastOffLineTimer}}"></input>
+    </view>
+    
+     <view class="cu-form-group margin-top">
+      <view class="title">上线时间：</view>
+      <input value="{{lastOnLineTimer}}"></input>
+    </view>
+     <view class="cu-form-group margin-top">
+      <view class="title">通讯方式：</view>
+      <input value="{{communicaType}}"></input>
+    </view> 
+    <view class="cu-form-group margin-top">
+      <view class="title">设备地址：</view>
+      <input value="{{adder}}"></input>
+    </view>
+  </form>
+  <view class='btn-group'>
+    <button size='mini' bindtap='deviceLocal' type='primary'>定位</button>
+    <button size='mini' bindtap='deviceOnline' type='primary' style='margin-left:5px'>上下线</button>
+    <button size='mini' bindtap='deviceSensor' type='primary' style='margin-left:5px'>数据</button>
+    <button size='mini' bindtap='deviceSetting' type='primary' style='margin-left:5px'>命令</button>
+    <button size='mini' bindtap='renewStatus' type='primary' style='margin-left:5px'>刷新状态</button>
+  </view>
+</view>

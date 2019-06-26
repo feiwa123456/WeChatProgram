@@ -1,0 +1,232 @@
+.playview {
+  margin-top: 30px;
+  height: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.controlview {
+  margin-top: 15px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.leftview {
+  /* background-color: red; */
+  height: 150px;
+  width: 50%;
+}
+
+.lefttopview {
+  display: flex;
+  justify-content: space-between;
+  height: 75px;
+  width: 100%;
+}
+
+.leftboomview {
+  display: flex;
+  justify-content: space-between;
+  height: 75px;
+  width: 100%;
+}
+
+.rightview {
+  /* background-color: red; */
+  height: 150px;
+  width: 30%;
+}
+
+.righttopview {
+  display: flex;
+  justify-content: space-between;
+  height: 75px;
+  width: 100%;
+}
+
+.rightboomview {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: blue;  */
+  height: 75px;
+  width: 100%;
+}
+
+.btnone {
+  margin-top: 10px;
+  margin-right: 20px;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  /* border: lightgrey;
+  border-style: solid;
+  border-width: 1px;  */
+}
+
+.btnthree {
+  margin-top: 10px;
+  margin-left: 20px;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  /* border: lightgrey;
+  border-style: solid;
+  border-width: 1px;  */
+}
+
+.btnfive {
+  margin-top: 10px;
+  margin-left: 20px;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  /* border: lightgrey;
+  border-style: solid;
+  border-width: 1px;  */
+}
+
+.btnsix {
+  margin-top: 10px;
+  margin-right: 20px;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  /* border: lightgrey;
+  border-style: solid;
+  border-width: 1px;  */
+}
+
+.topbtnview {
+  /* background-color: red;  */
+  display: flex;
+  justify-content: center;
+}
+
+.midbtnview {
+  /* background-color: blue; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.boombtnview {
+  /* background-color: purple; */
+  display: flex;
+  justify-content: center;
+}
+
+.topbtn {
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.midleftbtn {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.midrightbtn {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.boombtn {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.midokview {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  margin-top: -5px;
+  border: lightgray;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.textview {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 30px;
+  margin-top: 15;
+}
+
+.textlable {
+  height: 30px;
+  color: gray;
+}
+
+.remotecontrol {
+  border-radius: 50%;
+  margin-right: 20px;
+  border: lightgray;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.liveplayer {
+}
+
+.controls {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.toolview {
+  margin-top: 190px;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* background-color: lightgray; */
+}
+
+.play {
+  margin-left: 5px;
+  height: 50px;
+  width: 50px;
+}
+
+.fullscren {
+  margin-right: -20px;
+  height: 50px;
+  width: 50px;
+}
+
+.img {
+  width: 25px;
+  height: 25px;
+  margin-top: 5px;
+}
+
+.weui-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.weui-flex__item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.weui-btn {
+  margin-top: 15px;
+}

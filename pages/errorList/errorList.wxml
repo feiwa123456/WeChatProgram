@@ -1,0 +1,35 @@
+<!-- <view wx:for="{{errorDate}}" wx:for-index="idx">
+  <view class='list_top'>
+    <view>
+      <block wx:if="{{item.solve=='未处理'}}">
+        <image src="/images/warn.png" wx-if="{{imageshow}}"></image>
+      </block>
+      <block wx:else>
+        <image src="/images/handlewarn.png" wx-else></image>
+      </block>
+    </view>
+    <view>
+      <view class='target-css'>{{item.errorTarget}}</view>
+      <view class='msg-css'>{{item.msg}}</view>
+      <view class='time-css'>{{item.updateTime}}</view>
+    </view>
+    <view class='btn'>
+      <button size='mini' type='primary'>{{item.solve}}</button>
+    </view>
+
+  </view>
+</view> -->
+<view class="cu-timeline" wx:for="{{errorDate}}" wx:for-index="idx">
+  <view class="cu-item text-green">
+    <view class="bg-gradual-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">{{item.solve}}</view>
+        <view class="cu-tag line-white">{{item.updateTime}}</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>{{item.errorTarget}}</view>
+        <view>{{item.msg}}</view>
+      </view>
+    </view>
+  </view>
+</view>

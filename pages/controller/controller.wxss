@@ -1,0 +1,242 @@
+page {
+  background: #ecebf1;
+}
+
+#page_top {
+  width: 100%;
+  height: 17vh;
+  background: #44b5d8;
+  background: -moz-linear-gradient(-45deg, #44b5d8 0%, #44b5d8 100%, #44b5d8 100%);
+  background: -webkit-linear-gradient(-45deg, #44b5d8 0%, #44b5d8 100%, #44b5d8 100%);
+  background: linear-gradient(135deg, #44b5d8 0%, #44b5d8 100%, #44b5d8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b4e391', endColorstr='#b4e391', GradientType=1);
+}
+
+#page_top image {
+  position: absolute;
+  top: -2.5vh;
+  right: 0;
+  width: 20vh;
+  height: 20vh;
+  background-size: 100% 100%;
+  opacity: 0.3;
+}
+
+#device_name {
+  color: #fff;
+  font-size: 7vw;
+  font-weight: bold;
+  padding-top: 2vh;
+  margin-left: 2vw;
+}
+
+.singleView {
+  width: 95vw;
+  margin: 2.5vw;
+  padding-top: 2vw;
+  background: #fff;
+  border-radius: 2.5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.singleButtonView{
+  width: 95vw;
+  margin: 2.5vw;
+  padding-top: 2vw;
+  background: #fff;
+  border-radius: 2.5vw;
+}
+
+.singleFirstImage {
+  width: 15vw;
+  height: 16vw;
+  border-right: 1px solid #bfbfbf;
+}
+
+.singleTestView {
+  width: 50vw;
+  color: #4b4a4a;
+  font-family: "微软雅黑";
+}
+
+.singleSecondImage {
+  width: 15vw;
+  height: 16vw;
+}
+
+image {
+  width: 25px;
+  height: 25px;
+  margin: 15px 10px;
+}
+
+.singleInputView {
+  margin: 2.5vw;
+  width: 100vw;
+}
+
+.aGroupSelect {
+  display: flex;
+}
+
+.type_input_Css {
+  border: #8f8f94 solid 1px;
+  margin: 0 2vw;
+}
+
+switch {
+  zoom: 0.85;
+  margin: 2vw 2vw 1vw 0vw;
+}
+
+.custom {
+  margin: 2vw 2vw 1vw 0vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.custominput {
+  width: 55%;
+  border: 1rpx solid #dcdcdc;
+  border-radius: 1vw;
+  margin-right: 1vw;
+  color: #626262;
+  text-align: center;
+}
+
+.custom button {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #70c8e2;
+}
+.nopView {
+  margin-top: 2vw;
+  width: 100%;
+}
+
+.nopView button{
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #70c8e2;
+}
+
+.TimeView {
+  margin: 2vw 2vw 1vw 0vw;
+  width: 100%;
+}
+
+.TimeView picker {
+  border: 2rpx solid #dcdcdc;
+  background: white;
+  color: #626262;
+  width: 70%;
+  height: 25px;
+}
+
+.fixCss {
+  margin: 2vw 2vw 1vw 0vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.fixedinput {
+  width: 55%;
+  border: 1rpx solid #dcdcdc;
+  border-radius: 1vw;
+  color: #626262;
+}
+
+.fixCss button {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #70c8e2;
+}
+
+.OnAndOffView button {
+  background-color: #70c8e2;
+  margin: 2vw 2vw 1vw 0;
+}
+
+.circle {
+  position: fixed !important;
+  width: 10vw;
+  height: 10vw;
+  z-index: 9999;
+  right: 3vw;
+  background: #409eff;
+  border: 0 solid #409eff;
+  border-radius: 10vw;
+  text-align: center;
+  bottom: 2vh;
+}
+
+.circle text {
+  font-size: 6vw;
+  height: 10vw;
+  line-height: 10vw;
+}
+
+/* camera */
+
+.weui-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.weui-flex__item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.playview {
+  margin-top: 30px;
+  height: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.controls {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.toolview {
+  margin-top: 190px;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* background-color: lightgray; */
+}
+
+.play {
+  margin-left: 5px;
+  height: 50px;
+  width: 50px;
+}
+
+.fullscren {
+  margin-right: -20px;
+  height: 50px;
+  width: 50px;
+}
+
+.img {
+  width: 25px;
+  height: 25px;
+  margin-top: 5px;
+}

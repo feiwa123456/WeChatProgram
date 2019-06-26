@@ -1,0 +1,11 @@
+<!--pages/surplus/surplus.wxml-->
+<view class='view'>
+<text>{{surplus}}%</text>
+<i wx:if="{{surplus <=100 && surplus>=80}}" class="battery-icon hundred-percent" ></i>
+<i wx:elif="{{surplus < 80 && surplus >= 60}}" class="battery-icon seventy-five-percent"></i>
+<i wx:elif="{{surplus < 60 && surplus >= 40}}" class="battery-icon fifty-percent"></i>
+<i wx:elif="{{surplus < 40 && surplus >= 20}}" class="battery-icon twenty-five-percent"></i>
+<i wx:elif="{{surplus < 20 && surplus > 0}}" class="battery-icon ten-percent"></i>
+<i wx:else class="battery-icon charging"></i>
+</view>
+
